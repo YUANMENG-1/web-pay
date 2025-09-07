@@ -14,7 +14,7 @@
             color: #333;
             overflow: hidden; /* Prevent scrolling for full-screen effect */
             background: url('https://via.placeholder.com/1920x1080?text=Biological+Background+DNA+Helix') no-repeat center center fixed;
-            background-size: cover; /* Replace with actual background image URL if available */
+            background-size: cover;
         }
 
         /* Overlay for content readability */
@@ -24,7 +24,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 255, 255, 0.7); /* Semi-transparent white for contrast */
+            background: rgba(255, 255, 255, 0.7);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -37,7 +37,7 @@
         /* Header styling */
         h1 {
             font-size: 3em;
-            color: #0066cc; /* Blue for biological theme */
+            color: #0066cc;
             margin-bottom: 20px;
         }
 
@@ -65,22 +65,11 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* Use renamed images */
-        .image1 {
-            background-image: url('image1.jpeg');
-        }
-
-        .image2 {
-            background-image: url('image2.jpeg');
-        }
-
-        .image3 {
-            background-image: url('image3.png');
-        }
-
-        .image4 {
-            background-image: url('image4.jpeg');
-        }
+        /* Updated image paths based on GitHub files */
+        .image1 { background-image: url('image1.jpeg'); }
+        .image2 { background-image: url('image2.png'); }  /* Changed from .jpeg to .png */
+        .image3 { background-image: url('image3.jpeg'); }  /* Changed from .png to .jpeg */
+        .image4 { background-image: url('image4.jpeg'); }
 
         /* Button for submission (disabled until 30 days) */
         button {
@@ -133,8 +122,7 @@
     <footer>&copy; 2025 Your Journal. All rights reserved. Images showcase: Biology-related content.</footer>
 
     <script>
-        // Simple JS to simulate enabling button after 30 days (for demo purposes)
-        const paymentDate = new Date(); // Assume today is payment date
+        const paymentDate = new Date();
         const thirtyDaysLater = new Date(paymentDate);
         thirtyDaysLater.setDate(thirtyDaysLater.getDate() + 30);
 
