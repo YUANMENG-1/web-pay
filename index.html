@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal Membership Confirmation</title>
+    <style>
+        /* Full-screen layout with biological theme */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            color: #333;
+            overflow: hidden; /* Prevent scrolling for full-screen effect */
+            background: url('https://via.placeholder.com/1920x1080?text=Biological+Background+DNA+Helix') no-repeat center center fixed;
+            background-size: cover; /* Replace with actual background image URL if available */
+        }
+
+        /* Overlay for content readability */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.7); /* Semi-transparent white for contrast */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Header styling */
+        h1 {
+            font-size: 3em;
+            color: #0066cc; /* Blue for biological theme */
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            max-width: 800px;
+        }
+
+        /* Journal images and elements */
+        .journal-elements {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px 0;
+        }
+
+        .element {
+            width: 200px;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Use renamed images */
+        .image1 {
+            background-image: url('image1.jpeg');
+        }
+
+        .image2 {
+            background-image: url('image2.jpeg');
+        }
+
+        .image3 {
+            background-image: url('image3.png');
+        }
+
+        .image4 {
+            background-image: url('image4.jpeg');
+        }
+
+        /* Button for submission (disabled until 30 days) */
+        button {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        /* Footer with more bio info */
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <h1>Welcome, Respected Meng Yi Yuan!</h1>
+        <p>You have successfully paid $1000 for your journal membership.</p>
+        <p>Within 30 days, you can request a refund and cancel your membership.</p>
+        <p>After 30 days, you will be eligible to submit your own manuscript.</p>
+
+        <!-- Local images section -->
+        <div class="journal-elements">
+            <div class="element image1"></div>
+            <div class="element image2"></div>
+            <div class="element image3"></div>
+            <div class="element image4"></div>
+        </div>
+
+        <!-- Submission button (for demo, disabled; in real app, use JS to enable after 30 days) -->
+        <button disabled>Submit Manuscript (Available After 30 Days)</button>
+
+        <!-- Additional biological info for richness -->
+        <p>Explore our journal, focused on bioinformatics, genetics, and cell biology. Our platform integrates cutting-edge research with interactive tools for manuscript submission.</p>
+    </div>
+
+    <footer>&copy; 2025 Your Journal. All rights reserved. Images showcase: Biology-related content.</footer>
+
+    <script>
+        // Simple JS to simulate enabling button after 30 days (for demo purposes)
+        const paymentDate = new Date(); // Assume today is payment date
+        const thirtyDaysLater = new Date(paymentDate);
+        thirtyDaysLater.setDate(thirtyDaysLater.getDate() + 30);
+
+        const now = new Date();
+        const submitButton = document.querySelector('button');
+
+        if (now >= thirtyDaysLater) {
+            submitButton.disabled = false;
+            submitButton.textContent = 'Submit Manuscript Now';
+        }
+    </script>
+</body>
+</html>
